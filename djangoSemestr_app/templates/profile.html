@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+<p>{{ user.username }}</p>
+<a onclick="location.href='{% url 'logout' %}?next=/login'">Logout</a>
+<a href="page_2/login/accounts/profile/page_2/login/accounts/profile/page_2/login/accounts/profile/profile_edit/{{ user.id }}" >edit</a>
+
+    {{ foll.user }}
+    {{ foll.followers }}
+    {{ foll.following }}
+
+
+    {{ profile.about }}
+    <img src="/djangoSemestr_app/static/images/{{ profile.avatar }}"/>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>home</p>
+{% for i in posts %}
+    <p>{{ i.about }}</p>
+    {{ i.image }}
+    {{ i.user }}
+{% endfor %}
+{% for p in foll %}
+    {{ p.user }}
+    {{ p.followers }}
+    {{ p.following }}
+{% endfor %}
+</body>
+</html>
