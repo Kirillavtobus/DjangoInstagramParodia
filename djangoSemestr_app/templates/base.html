@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% block import %} {% endblock %}
+</head>
+<body>
+
+<div class="link_prof">
+    <a href="login/accounts/profile/{{ user.id }}"><img class="image1" src="/media/—Pngtree—default male avatar_5939655.png">profile</a>
+</div>
+<div class="link_search">
+    <a href="page_2/"><img class="image" src="/media/images.png">Search</a>
+</div>
+<div class="link_create">
+    <a href="post_create"><img class="image2" src="/media/download.png">Create</a>
+</div>
+<div class="home">
+    <a href="/"><img class="image3" src="/media/—Pngtree—vector house icon_4162861.png">Home</a>
+</div>
+<div class="strip">
+
+</div>
+{% block content %} {% endblock %}
+</body>
+</html>

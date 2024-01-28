@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>profile</title>
-</head>
-<body>
-<p>{{ user.username }}</p>
-<a onclick="location.href='{% url 'logout' %}?next=/login'">Logout</a>
-<a href="page_2/login/accounts/profile/page_2/login/accounts/profile/page_2/login/accounts/profile/profile_edit/{{ user.id }}" >edit</a>
+{% extends 'base.html' %}
 
-    {{ foll.user }}
-    {{ foll.followers }}
-    {{ foll.following }}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile.css' %}">
+<p class="username">{{ user.username }}</p>
+<a class="logout" onclick="location.href='{% url 'logout' %}?next=/login'">Logout</a>
+<a class="edit" href="page_2/login/accounts/profile/page_2/login/accounts/profile/page_2/login/accounts/profile/profile_edit/{{ user.id }}" >Edit Profile</a>
+<a href="post_create" class="new_post" id="btn_post_create" data_url="login/accounts/profile/{{ user.id }}">New post</a>
+    <p class="followers">Followers {{ followers }}</p>
+    <p class="following">Following {{ following }}</p>
+    <p class="about">{{ c.about }}</p>
+    <img class="img" src="{{ profile.avatar }}"/>
+    <div class="strip1">
 
+    </div>
 
-    {{ profile.about }}
-    <img src="/djangoSemestr_app/static/images/{{ profile.avatar }}"/>
-
-</body>
-</html>
+{% endblock %}

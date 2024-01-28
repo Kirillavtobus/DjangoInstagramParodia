@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>edit</title>
-</head>
-<body>
-    <form method="post" enctype="multipart/form-data">
+{% extends 'base.html' %}
+{% block import %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'prof_edit.css' %}" type="text/css">
+    <form method="post" enctype="multipart/form-data" novalidate>
         {% csrf_token %}
-        {{ form }}
-        <input type="submit">
+        <div class="form_edit">
+            {{ form }}
+        </div>
+        <input class="submit_edit" type="submit">
     </form>
-</body>
-</html>
+{% endblock %}

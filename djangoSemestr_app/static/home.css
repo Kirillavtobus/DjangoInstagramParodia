@@ -1,0 +1,35 @@
+.display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    position: relative;
+    left: 600px;
+    color: white;
+
+
+}
+.display .user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    left: 000px;
+    color: white;
+
+
+}
+
+.text{
+    color: white;
+    position: relative;
+    left: 150px;
+    top: 300px;
+
+}
+
+

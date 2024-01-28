@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>fdfhg</title>
-</head>
-<body>
-<a href="login/accounts/profile/{{ user.id }}">profile</a>
-<p>{{ posts }}</p>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'search.css' %}">
 <form action="" method="get">
-    <input type="search"  name="q" placeholder="Search user">
-    <button type="submit">Search</button>
+    <input class="search" type="search"  name="q" placeholder="Search user">
+    <button class="submit" type="submit">Search</button>
 </form>
 {% for s in users %}
-    <a href="profile_view/{{ s.id }}">{{ s.username }}</a>
+    <a class="username" href="profile_view/{{ s.id }}">{{ s.username }}</a>
 {% endfor %}
-</body>
-</html>
+<img class="image_prof" src='{{ profile }}'>
+{% endblock %}

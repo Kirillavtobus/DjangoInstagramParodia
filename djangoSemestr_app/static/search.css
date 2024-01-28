@@ -1,0 +1,23 @@
+.search{
+    position: relative;
+    background: grey;
+    left: 800px;
+    top: -100px;
+    width: 300px;
+    font-size: 20px;
+}
+.submit{
+    position: relative;
+    top: -100px;
+    left: 900px;
+    font-size: 25px;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.username{
+    position: relative;
+    left: 800px;
+    top: -50px;
+}

@@ -1,0 +1,80 @@
+.img{
+    position: relative;
+    left: 300px;
+}
+
+.logout{
+    position: relative;
+    left: 1500px;
+    top: -144px;
+    border: 20px;
+    background: grey;
+    font-size: 23px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 12px;
+    border-radius: 5px;
+}
+
+.strip1{
+    position: absolute;
+    left: 550px;
+    top: 350px;
+    height: 1px;
+    width: 1100px;
+    background: grey;
+}
+
+.username{
+    color: white;
+    position: absolute;
+    left: 1100px;
+    top: 43px;
+    font-size: 25px;
+}
+
+.edit{
+    position: absolute;
+    left: 1200px;
+    border: 20px;
+    background: grey;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 12px;
+    border-radius: 5px;
+    top: 60px;
+}
+
+.new_post{
+    position: absolute;
+    left: 1365px;
+    border: 20px;
+    background: grey;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    top: 60px;
+    color: white;
+}
+
+.followers{
+    color: white;
+    position: absolute;
+    left: 1150px;
+    font-size: 20px;
+    top: 140px;
+
+
+}
+
+.following{
+    color: white;
+    position: absolute;
+    left: 1350px;
+    font-size: 20px;
+    top: 140px;
+
+}

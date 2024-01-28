@@ -1,0 +1,18 @@
+.form_edit{
+    position: relative;
+    left: 800px;
+    background: grey;
+    padding: 5px;
+    border-radius: 3px;
+    width: 550px;
+    top: 500px;
+}
+.submit_edit{
+    position: relative;
+    background: grey;
+    left: 970px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    top: 550px;
+}

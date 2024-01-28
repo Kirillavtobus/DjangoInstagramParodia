@@ -1,0 +1,32 @@
+.profile_link{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: -150px;
+    left: 335px;
+
+}
+
+.btn_snd open mx-2{
+    background: blue;
+    position: relative;
+    left: 275px;
+    border: none;
+    border-radius: 5px;
+    top: -110px;
+    font-size: 25px;
+}
+
+.col-8{
+    position: relative;
+    top: -1000px;
+    left: 900px;
+    background: black;
+    color: white;
+    width: 600px;
+}
+
+.profile-image pr-3{
+    position: relative;
+    left: 300px;
+}

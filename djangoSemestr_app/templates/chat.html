@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chat.css' %}" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/js/chat.js"></script>
+</head>
+<body>
+<div>
+    <div class="my-3" style="overflow-y: scroll; height: 600px;">
+        {% if messages %}
+        <div id="messages" class="container">
+                {% for m in messages %}
+                    {% if m.user == user %}
+                        <div class="row">
+                            <div>
+                                <p class="u_msg float-end">{{ m.body }}</p><br>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="row">
+                            <div>
+                                <p class="msg">{{ m.body }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <div>
+        {% csrf_token %}
+        {% for f in form %}
+            {{ f }}
+        {% endfor %}
+        <button id="input" class="btn_snd" data-url="/chats/" data-id="{{ chat.id }}">Send</button>
+    </div>
+</div>
+

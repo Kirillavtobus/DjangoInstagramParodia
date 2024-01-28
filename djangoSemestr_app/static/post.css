@@ -1,0 +1,32 @@
+.post_image{
+    position: relative;
+    left: 700px;
+}
+.user_post{
+    position: relative;
+    left: 500px;
+    top: 0px;
+    font-size: 20px;
+}
+.about_post{
+    color: white;
+    position: absolute;
+    left: 500px;
+    top: 800px;
+}
+.form_comment input{
+    position: relative;
+    left: 1000px;
+    top: 600px;
+    background: grey;
+    width: 400px;
+    color: white;
+}
+.add_comment{
+    position: relative;
+    left: 1510px;
+    top: 580px;
+    background: grey;
+}
+
+

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'post.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/js/post.js"></script>
+    <a class="user_post" href="post/page_2/profile_view/{{ post.user.id }}">{{ post.user.username }}</a>
+    <p class="about_post">{{ post.about }}</p>
+    <img class="post_image" src="{{ post.image }}">
+    <div id="comments">
+
+    </div>
+    {% csrf_token %}
+    <div class="form_comment">{{ form }}</div>
+    <button id="add_comment" class="add_comment" data-url="post/{{ post.id }}">Add Comment</button>
+{% endblock %}

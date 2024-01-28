@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>profile_view</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <a href="/page_2" onclick="following()" >Follow</a>
+{% block content %}
+{% load static %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/static/js/profile_view.js"></script>
+    <link rel="stylesheet" href="{% static 'profile_view.css' %}">
 
-        {{ user_following.following }}
-        {{ user_following.followers }}
 
-</body>
-</html>
+    <a class="profile_fol mx-2" href="/start_chat/{{ user.id }}">Message</a>
+    {% csrf_token %}
+    <input type="hidden" id="is_follow" data-for="{{ is_followed }}">
+    <button id="follow" class="profile_fol" data-id="{{ user.id }}" data-url="{{ user.id }}"><b class="unfoll" id="action">Follow</b></button>
+    <b id='followers' class="followers">Followers {{ followers }}</b> followers <b class="following">Following {{ following }}</b> following</p>
+    <div class="strip1">
+
+    </div>
+{% endblock %}

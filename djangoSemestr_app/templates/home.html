@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<p>home</p>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
 {% for i in posts %}
-    <p>{{ i.about }}</p>
-    {{ i.image }}
-    {{ i.user }}
+<div class="display">
+    <p class="text">{{ i.about }}</p>
+    <img class="img" src="{{ i.image.url }}">
+    <a class="user" href="page_2/profile_view/{{ i.user.id }}">{{ i.user }}</a>
+    <a href="post/{{ i.id }}" class="comment" data-url="/">Comment</a>
+
+    <div class="form">
+
+    </div>
+</div>
 {% endfor %}
-{% for p in foll %}
-    {{ p.user }}
-    {{ p.followers }}
-    {{ p.following }}
-{% endfor %}
-</body>
-</html>
+
+{% endblock %}
